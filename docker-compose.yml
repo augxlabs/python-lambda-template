@@ -2,6 +2,8 @@ version: "3.7"
 services:
   operator:
     build: .
-    image: python_template:0.1.0
+    image: python_lambda_template:0.1.0
     volumes: 
       - ${PWD}:/usr/app/src/
+    ports: 
+      - '9000:8080'      
